@@ -1,0 +1,21 @@
+@use "../../../scss/variables" as v;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.125rem 1.5rem;
+    background-color: v.$White;
+    &__logo {
+        max-width: 202px;
+    }
+    &__menu-btn {
+        background: transparent url(../../../assets/images/shared/mobile/icon-hamburger.svg) top center no-repeat;
+        border: none;
+        cursor: pointer;
+    }
+    &__menu-btn-img {
+        opacity: 0;
+    }
+
+}

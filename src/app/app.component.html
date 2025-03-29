@@ -1,1 +1,8 @@
-<h1>Designo Website</h1>
+<mat-sidenav-container [hasBackdrop]="false" >
+    <mat-sidenav #drawer mode="over" position="end" fixedInViewport="true" fixedTopGap="96">
+        Sidenav
+    </mat-sidenav>
+</mat-sidenav-container>
+
+<app-header [drawer]="drawer"></app-header>
+<app-footer></app-footer>

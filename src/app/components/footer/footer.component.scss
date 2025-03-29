@@ -1,0 +1,52 @@
+@use "../../../scss/variables" as v;
+@use "../../../scss/mixins" as m;
+
+.footer {
+    background-color: v.$Black;
+    margin-top: 25rem; // Remover depois
+    &__get-in-touch {
+        background: v.$Peach url(../../../assets/images/shared/mobile/bg-pattern-design-pages-intro-mobile.svg) no-repeat;
+        background-position: right -10px top -100px;
+        margin: 24px 24px -130px 24px;
+        padding: 64px 24px;
+        border-radius: .9375rem;
+        transform: translateY(-192px);
+        &-text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: .375rem;
+        }
+        &-title {
+            font-size: 32px;
+            font-weight: 500;
+            color: v.$White;
+            line-height: 36px;
+        }
+        &-paragraph {
+            margin-top: .75rem;
+            font-size: 15px;
+            font-weight: 400;
+            color: v.$White;
+            line-height: 25px;
+        }
+        &-btn {
+            margin-top: 1.625rem;
+            @include m.whiteButton();
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        color: v.$White;
+        &-logo {
+            max-width: 202px;
+        }
+        &-divider {
+            width: 100%;
+        }
+    }
+}

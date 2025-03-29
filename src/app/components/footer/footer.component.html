@@ -1,0 +1,70 @@
+<footer class="footer">
+    <div class="footer__get-in-touch">
+        <div class="footer__get-in-touch-text-container">
+            <h2 class="footer__get-in-touch-title">
+                Let’s talk about your project
+            </h2>
+            <p class="footer__get-in-touch-paragraph">
+                Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.
+            </p>
+            <button class="footer__get-in-touch-btn">
+                Get in touch
+            </button>
+        </div>
+    </div>
+
+    <div class="footer__info">
+        <img src="shared/desktop/logo-light.png" alt="" class="footer__info-logo">
+        <hr class="footer__info-divider">
+        <ul class="footer__info-links">
+            <li>Our Company</li>
+            <li>Locations</li>
+            <li>Contact</li>
+        </ul>
+        <div class="footer__info-address">
+            <strong>Designo Central Office</strong>
+            <p>3886 Wellington Street</p>
+            <p>Toronto, Ontario M9C 3J5</p>
+        </div>
+        <div class="footer__info-address">
+            <strong>Contact Us (Central Office)</strong>
+            <p>P : +1 253-863-8967</p>
+            <p>M : contact&#64;designo.co</p>
+        </div>
+        <ul class="footer__info-socials">
+            <ng-template #socialMedia let-img="img">
+                <li class="footer__info-socials-item">
+                    <a href="" class="footer__info-socials-link">
+                        <img [src]="img" alt="" class="footer__info-socials-icon">
+                    </a>
+                </li>
+            </ng-template>
+            <ng-container 
+                *ngTemplateOutlet="socialMedia; context: { 
+                    img: 'shared/desktop/icon-facebook.svg' 
+                }">
+            </ng-container>
+            <ng-container 
+                *ngTemplateOutlet="socialMedia; context: { 
+                    img: 'shared/desktop/icon-youtube.svg' 
+                }">
+            </ng-container>
+            <ng-container 
+                *ngTemplateOutlet="socialMedia; context: { 
+                    img: 'shared/desktop/icon-twitter.svg' 
+                }">
+            </ng-container>
+            <ng-container 
+                *ngTemplateOutlet="socialMedia; context: { 
+                    img: 'shared/desktop/icon-pinterest.svg' 
+                }">
+            </ng-container>
+            <ng-container 
+                *ngTemplateOutlet="socialMedia; context: { 
+                    img: 'shared/desktop/icon-instagram.svg' 
+                }">
+            </ng-container>
+            
+        </ul>
+    </div>
+</footer>
