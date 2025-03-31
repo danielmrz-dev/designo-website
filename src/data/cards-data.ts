@@ -1,4 +1,5 @@
 import { IFeatureCard } from "../app/interfaces/feature-card.interface";
+import { ILocationCard } from "../app/interfaces/location-card.interface";
 import { IProjectCard } from "../app/interfaces/project-card.interface";
 import { IViewProjectCard } from "../app/interfaces/view-project-card.interface";
 
@@ -139,3 +140,21 @@ export const projectCardsInfo: IProjectCard[] = [
         description: "A poster made in collaboration with the Federal Art Project."
     }
 ];
+
+export const locationCardInfo: ILocationCard[] = [
+    {
+        image: 'shared/desktop/illustration-canada.svg',
+        location: 'Canada'
+    },
+    {
+        image: 'shared/desktop/illustration-australia.svg',
+        location: 'Australia'
+    },
+    {
+        image: 'shared/desktop/illustration-united-kingdom.svg',
+        location: 'United Kingdom'
+    },
+    
+]
+
+

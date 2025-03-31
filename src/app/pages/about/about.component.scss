@@ -1,0 +1,62 @@
+@use "../../../scss/variables" as v;
+
+.about {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 120px;
+    &__image {
+        width: 100%;
+    }
+    &__first-text-section {
+        background: v.$Peach url(../../../assets/images/about/mobile/bg-pattern-hero-about-mobile.svg) top center no-repeat;
+        background-position: right top -142px;
+        padding: 5rem 1.5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        color: v.$White;
+        &-title {
+            font-size: 2rem;
+            line-height: 36px;
+            font-weight: 500;
+        }
+        &-paragraph {
+            font-size: .9375rem;
+            line-height: 25px;
+        }
+    }
+    &__second-text-section {
+        background: v.$Very-Light-Peach url(../../../assets/images/shared/desktop/bg-pattern-three-circles.svg);
+        padding: 5rem 1.5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        color: v.$White;
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        &-title {
+            color: v.$Peach;
+            font-size: 2rem;
+            line-height: 36px;
+            font-weight: 500;
+        }
+        &-paragraph {
+            color: v.$Dark-Grey;
+            font-size: .9375rem;
+            line-height: 25px;
+            font-weight: 500;
+            opacity: .8;
+        }
+    }
+    &__location-cards {
+        padding: 7.5rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+}

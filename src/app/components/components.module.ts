@@ -7,6 +7,7 @@ import { ViewProjectsCardComponent } from './view-projects-card/view-projects-ca
 import { FeatureCardComponent } from './feature-card/feature-card.component';
 import { RouterLink } from '@angular/router';
 import { ProjectCardComponent } from './project-card/project-card.component';
+import { LocationCardComponent } from './location-card/location-card.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ProjectCardComponent } from './project-card/project-card.component';
     FooterComponent,
     ViewProjectsCardComponent,
     FeatureCardComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    LocationCardComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import { ProjectCardComponent } from './project-card/project-card.component';
     FooterComponent,
     ViewProjectsCardComponent,
     FeatureCardComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    LocationCardComponent
   ]
 })
 export class ComponentsModule { }
