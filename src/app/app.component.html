@@ -1,8 +1,9 @@
-<mat-sidenav-container [hasBackdrop]="false" >
+<mat-sidenav-container [hasBackdrop]="false">
     <mat-sidenav #drawer mode="over" position="end" fixedInViewport="true" fixedTopGap="96">
         Sidenav
     </mat-sidenav>
 </mat-sidenav-container>
 
 <app-header [drawer]="drawer"></app-header>
+<router-outlet></router-outlet>
 <app-footer></app-footer>

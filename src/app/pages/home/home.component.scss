@@ -1,0 +1,39 @@
+@use "../../../scss/variables" as v;
+@use "../../../scss/mixins" as m;
+
+.home {
+    background: v.$Peach url(../../../assets/images/home/desktop/bg-pattern-hero-home.svg) no-repeat;
+    background-position: 0 102px;
+    color: v.$White;
+    padding: 5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    min-height: 843px;
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    &__title {
+        font-size: 2rem;
+        line-height: 36px;
+        font-weight: 400;
+    }
+    &__paragraph {
+        font-size: .9375rem;
+        line-height: 25px;
+        font-weight: 400;
+    }
+    &__btn {
+        @include m.whiteButton();
+    }
+    &__image {
+        position: absolute;
+        top: 302px;
+    }
+}

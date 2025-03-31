@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ComponentsModule } from "./components/components.module";
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { PagesModule } from './pages/pages.module';
 
 
 @NgModule({

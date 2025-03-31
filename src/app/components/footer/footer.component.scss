@@ -42,11 +42,40 @@
         align-items: center;
         gap: 2rem;
         color: v.$White;
+        padding: 1.5rem;
         &-logo {
             max-width: 202px;
         }
         &-divider {
+            border-color: v.$Divider-Color;
+            opacity: .1;
             width: 100%;
+        }
+        &-links {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            align-items: center;
+            font-size: .875rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 14px;
+            a {
+                text-decoration: none;
+                color: v.$White;
+            }
+        }
+        &-address {
+            text-align: center;
+            font-size: 1rem;
+            line-height: 26px;
+            opacity: .5;
+            padding: .5rem 0;
+        }
+        &-socials {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
         }
     }
 }
