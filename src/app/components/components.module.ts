@@ -6,13 +6,15 @@ import { FooterComponent } from './footer/footer.component';
 import { ViewProjectsCardComponent } from './view-projects-card/view-projects-card.component';
 import { FeatureCardComponent } from './feature-card/feature-card.component';
 import { RouterLink } from '@angular/router';
+import { ProjectCardComponent } from './project-card/project-card.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     ViewProjectsCardComponent,
-    FeatureCardComponent
+    FeatureCardComponent,
+    ProjectCardComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +27,8 @@ import { RouterLink } from '@angular/router';
     HeaderComponent,
     FooterComponent,
     ViewProjectsCardComponent,
-    FeatureCardComponent
+    FeatureCardComponent,
+    ProjectCardComponent
   ]
 })
 export class ComponentsModule { }

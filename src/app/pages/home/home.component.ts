@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IProjectCard } from '../../interfaces/project-card.interface';
-import { featureCardsContent, projectCardsContent } from '../../../data/project-cards';
+import { IViewProjectCard } from '../../interfaces/view-project-card.interface';
+import { featureCardsContent, viewProjectCardsContent } from '../../../data/cards-data';
 import { IFeatureCard } from '../../interfaces/feature-card.interface';
 
 @Component({
@@ -9,6 +9,6 @@ import { IFeatureCard } from '../../interfaces/feature-card.interface';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  cardsContent: IProjectCard[] = projectCardsContent;
+  cardsContent: IViewProjectCard[] = viewProjectCardsContent;
   featureCardContent: IFeatureCard[] = featureCardsContent;
 }

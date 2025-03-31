@@ -1,5 +1,6 @@
 export interface IProjectCard {
-    title: string,
-    image: string,
-    link: string
+    page: string;
+    image: string;
+    title: string;
+    description: string;
 }

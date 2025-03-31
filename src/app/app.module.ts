@@ -18,6 +18,7 @@ import { PagesModule } from './pages/pages.module';
     AppRoutingModule,
     MatSidenavModule,    
     ComponentsModule,
+    PagesModule
 ],
   providers: [
     provideAnimationsAsync()

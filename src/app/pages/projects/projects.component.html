@@ -1,1 +1,23 @@
-<p>projects works!</p>
+<section class="project">
+    <h2 class="project__title">{{ pageTitle | titlecase }}</h2>
+    <p class="project__paragraph">
+        {{ pageDescription }}
+    </p>
+</section>
+
+<section class="project__projects-list">
+    <app-project-card
+        *ngFor="let card of projectCardsInfo | filterProjectCards : pageTitle"
+        [cardInfo]="card">
+    </app-project-card>
+</section>
+
+<section class="project__view-project-cards">
+    <app-view-projects-card
+        *ngFor="let card of viewProjectCardsContent | filterViewProjectsCards : pageTitle"
+        [bgImage]="card.image"
+        [title]="card.title"
+        [link]="card.link"
+        >
+    </app-view-projects-card>
+</section>
