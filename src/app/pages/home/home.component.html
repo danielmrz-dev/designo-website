@@ -11,11 +11,22 @@
     <img src="home\desktop\image-hero-phone.png" alt="A cellphone containing the word Frame" class="home__image">
 </section>
 
-<section class="cards">
+<section class="home__project-cards">
     <app-view-projects-card
-        bgImage="'home/mobile/image-web-design.jpg'"
-        title="Web Design"
-        subtitle="View Projects"
-    >
+        *ngFor="let card of cardsContent"
+        [bgImage]="card.image"
+        [title]="card.title"
+        [link]="card.link"
+        >
     </app-view-projects-card>
+</section>
+
+<section class="home__feature-cards">
+    <app-feature-card
+        *ngFor="let featureCard of featureCardContent"
+        [image]="featureCard.image"
+        [title]="featureCard.title"
+        [paragraph]="featureCard.paragraph"
+        >
+    </app-feature-card>
 </section>

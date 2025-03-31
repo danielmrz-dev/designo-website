@@ -36,4 +36,16 @@
         position: absolute;
         top: 302px;
     }
+    &__project-cards {
+        padding: 7.5rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    &__feature-cards {
+        padding: 0 1.5rem 7.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+    }
 }

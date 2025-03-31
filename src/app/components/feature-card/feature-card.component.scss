@@ -1,0 +1,32 @@
+@use "../../../scss/variables" as v;
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+    background: url(../../../assets/images/shared/desktop/bg-pattern-small-circle.svg) center top no-repeat;
+    background-size: 202px;
+    &__image {
+        max-width: 202px;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    &__title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+    &__paragraph {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+    }
+}
