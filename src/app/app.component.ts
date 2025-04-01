@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'designo-website';
+  
+  isScrollActive: boolean = true;
+
+  toggleScroll() {
+    this.isScrollActive = !this.isScrollActive;
+    document.body.style.overflow = this.isScrollActive ? 'auto' : 'hidden';
+  }
 }

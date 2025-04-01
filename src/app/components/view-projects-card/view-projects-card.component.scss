@@ -12,6 +12,13 @@
     gap: .75rem;
     width: 100%;
     position: relative;
+    mix-blend-mode: multiply;
+    &:hover {
+        cursor: pointer;
+        &::after {
+            background-color: v.$Opaque-Peach;
+        }
+    }
     &::after {
         content: "";
         position: absolute;
@@ -21,6 +28,7 @@
         height: 100%;
         border-radius: 15px;
         background-color: rgba(0, 0, 0, 0.518);
+        transition: background-color .3s ease;
     }
     &__title {
         z-index: 1;

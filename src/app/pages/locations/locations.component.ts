@@ -8,20 +8,17 @@ import { locationsUrls } from '../../../data/cards-data';
   styleUrl: './locations.component.scss'
 })
 export class LocationsComponent {
+
   canada: SafeResourceUrl = "";
   australia: SafeResourceUrl = "";
   uk: SafeResourceUrl = "";
-
-
   constructor(private readonly sanitizer: DomSanitizer) {
   }
-  
   ngOnInit(): void {
     this.canada = this.sanitizeUrl(locationsUrls.canada);    
     this.australia = this.sanitizeUrl(locationsUrls.australia);    
     this.uk = this.sanitizeUrl(locationsUrls.uk);    
   }
-
   private sanitizeUrl(url: string): SafeResourceUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }

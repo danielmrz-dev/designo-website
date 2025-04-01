@@ -8,6 +8,7 @@
     background-color: v.$White;
     &__logo {
         max-width: 202px;
+        cursor: pointer;
     }
     &__menu-btn {
         background: transparent url(../../../assets/images/shared/mobile/icon-hamburger.svg) top center no-repeat;

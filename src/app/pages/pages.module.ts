@@ -7,6 +7,9 @@ import { FilterViewProjectsCardsPipe } from './pipes/filter-view-projects-cards.
 import { FilterProjectCardsPipe } from './pipes/filter-project-cards.pipe';
 import { AboutComponent } from './about/about.component';
 import { LocationsComponent } from './locations/locations.component';
+import { ContactComponent } from './contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,16 +19,20 @@ import { LocationsComponent } from './locations/locations.component';
     FilterProjectCardsPipe,
     AboutComponent,
     LocationsComponent,
+    ContactComponent,
   ],
   imports: [
     CommonModule,
-    ComponentsModule
+    ComponentsModule,
+    ReactiveFormsModule,
+    RouterLink
   ],
   exports: [
     HomeComponent,
     ProjectsComponent,
     AboutComponent,
     LocationsComponent,
+    ContactComponent,
   ]
 })
 export class PagesModule { }

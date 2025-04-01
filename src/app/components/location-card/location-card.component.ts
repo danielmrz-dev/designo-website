@@ -9,4 +9,5 @@ import { ILocationCard } from '../../interfaces/location-card.interface';
 export class LocationCardComponent {
 
   @Input({ required: true }) locationCardInfo!: ILocationCard;
+
 }

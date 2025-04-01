@@ -3,11 +3,10 @@
 
 .footer {
     background-color: v.$Black;
-    margin-top: 12rem; // Remover depois
     &__get-in-touch {
         background: v.$Peach url(../../../assets/images/shared/mobile/bg-pattern-design-pages-intro-mobile.svg) no-repeat;
         background-position: right -10px top -100px;
-        margin: 24px 24px -130px 24px;
+        margin: 24px 24px -190px 24px;
         padding: 64px 24px;
         border-radius: .9375rem;
         transform: translateY(-192px);
@@ -42,7 +41,7 @@
         align-items: center;
         gap: 2rem;
         color: v.$White;
-        padding: 1.5rem;
+        padding: 4rem 1.5rem;
         &-logo {
             max-width: 202px;
         }
@@ -60,9 +59,26 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             line-height: 14px;
-            a {
+            &-item {
                 text-decoration: none;
                 color: v.$White;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    background-color: v.$White;
+                    height: 1px;
+                    width: 100%;
+                    transform: scaleX(0);
+                    transition: transform .3s ease;
+                }
+                &:hover {
+                    &::after {
+                        transform: scaleX(1);
+                    }
+                }
             }
         }
         &-address {

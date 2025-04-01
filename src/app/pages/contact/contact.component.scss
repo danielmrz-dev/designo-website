@@ -1,0 +1,59 @@
+@use "../../../scss/variables" as v;
+@use "../../../scss/mixins" as m;
+
+.contact {
+    padding: 4.5rem 1.5rem;
+    background: v.$Peach url(../../../assets/images/contact/mobile/bg-pattern-hero-contact-mobile.svg) no-repeat;
+    background-position: -100px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    &__text {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        color: v.$White;
+        &-title {
+            font-size: 2rem;
+            line-height: 36px;
+            font-weight: 500;
+        }
+        &-paragraph {
+            font-size: 15px;
+            line-height: 25px;
+            font-weight: 400;
+            opacity: .8;
+        }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        &-input {
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid v.$White;
+            padding: 11px 13px;
+            &::placeholder {
+                font-size: .9375rem;
+                line-height: 26px;
+                color: v.$White;
+                opacity: .5;
+            }
+        }
+        &-submit-btn {
+            @include m.whiteButton();
+            padding: 1.125rem 2.9375rem;
+            width: fit-content;
+            margin: 16px auto 0;
+        }
+    }
+    &__locations {
+        padding: 7.5rem .75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+}

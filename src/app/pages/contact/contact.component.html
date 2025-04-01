@@ -1,0 +1,36 @@
+<section class="contact">
+    <div class="contact__text">
+        <h2 class="contact__text-title">
+            Contact Us
+        </h2>
+        <p class="contact__text-paragraph">
+            Ready to take it to the next level? Let’s talk about your project or idea and find out how we can help your business grow. If you are looking for unique digital experiences that’s relatable to your users, drop us a line.
+        </p>
+    </div>
+    <form [formGroup]="contactForm" class="contact__form" (ngSubmit)="log()">
+        <div 
+            class="contact__form-input-wrapper" 
+            *ngFor="let field of fieldOrder">
+            <input type="text" class="contact__form-input"
+                [formControlName]="field" 
+                [placeholder]="field | titlecase">
+        </div>
+        <div class="contact__form-input-wrapper">
+            <textarea 
+                formControlName="message"
+                placeholder="Your Message"
+                rows="4"
+                class="contact__form-input">
+            </textarea>
+        </div>
+        <button type="submit" class="contact__form-submit-btn">Submit</button>
+    </form>
+</section>
+
+<section class="contact__locations">
+    <app-location-card
+        *ngFor="let card of locationCardsInfo"
+        [locationCardInfo]="card"
+    ></app-location-card>
+</section>
+

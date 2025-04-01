@@ -1,6 +1,24 @@
-<mat-sidenav-container [hasBackdrop]="false">
-    <mat-sidenav #drawer mode="over" position="end" fixedInViewport="true" fixedTopGap="96">
-        Sidenav
+<mat-sidenav-container [hasBackdrop]="false" class="sidenav" cdkTrapFocus cdkTrapFocusAutoCapture>
+    <mat-sidenav 
+        #drawer 
+        (closed)="toggleScroll()"
+        (opened)="toggleScroll()"
+        mode="over" 
+        position="end" 
+        fixedInViewport="true" 
+        fixedTopGap="95"
+        class="sidenav__menu">
+        <ul class="sidenav__links">
+                <li class="sidenav__link">
+                    <a routerLink="/about" (click)="drawer.close()">Our Company</a>
+                </li>
+                <li class="sidenav__link">
+                    <a routerLink="/locations" (click)="drawer.close()">Locations</a>
+                </li>
+                <li class="sidenav__link">
+                    <a routerLink="/contact" (click)="drawer.close()">Contact</a>
+                </li>
+            </ul>
     </mat-sidenav>
 </mat-sidenav-container>
 

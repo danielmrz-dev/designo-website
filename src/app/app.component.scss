@@ -1,3 +1,27 @@
-mat-sidenav {
-    width: 100%;
+@use "../scss/variables" as v;
+
+.sidenav {
+    border-radius: 0;
+    &__menu {
+        width: 100%;
+        border-radius: 0 !important;    
+        background-color: v.$Opaque-Dark-Grey;
+    }
+    &__links {
+        background-color: v.$Black;
+        padding: 3rem 1.5rem;
+        color: v.$White;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    &__link {
+        font-size: 1.5rem;
+        line-height: 25px;
+        text-transform: uppercase;
+        a {
+            text-decoration: none;
+            color: v.$White;
+        }
+    }
 }

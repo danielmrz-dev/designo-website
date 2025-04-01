@@ -7,6 +7,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { ComponentsModule } from "./components/components.module";
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { PagesModule } from './pages/pages.module';
+import { A11yModule } from '@angular/cdk/a11y';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { PagesModule } from './pages/pages.module';
     AppRoutingModule,
     MatSidenavModule,    
     ComponentsModule,
-    PagesModule
+    PagesModule,
+    A11yModule
 ],
   providers: [
     provideAnimationsAsync()
