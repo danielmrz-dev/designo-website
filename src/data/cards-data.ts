@@ -154,7 +154,12 @@ export const locationCardInfo: ILocationCard[] = [
         image: 'shared/desktop/illustration-united-kingdom.svg',
         location: 'United Kingdom'
     },
-    
 ]
 
+export const locationsUrls = {
+    canada: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.21555459201!2d-79.5801433!3d43.64368345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3838d5a82ffb%3A0xc748b18e3e8b98e!2sEtobicoke%2C%20ON%20M9C%203J5%2C%20Canad%C3%A1!5e0!3m2!1spt-BR!2sbr!4v1743516203298!5m2!1spt-BR!2sbr",
+    australia: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217162.03857874978!2d152.5142520965058!3d-31.738919342663184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b75e430e915ad1d%3A0x1c0609b7ccd30f00!2sCoralville%20Nova%20Gales%20do%20Sul%202443%2C%20Austr%C3%A1lia!5e0!3m2!1spt-BR!2sbr!4v1743518318899!5m2!1spt-BR!2sbr",
+    uk: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9884.21410326038!2d-3.881383798274301!3d51.732056328928515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e5867a4c5658f%3A0xf837c949fc975d7b!2sRhyd-y-fro%2C%20Pontardawe%2C%20Swansea%2C%20Reino%20Unido!5e0!3m2!1spt-BR!2sbr!4v1743518391366!5m2!1spt-BR!2sbr"
+
+}
 

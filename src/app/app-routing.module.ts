@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { AboutComponent } from './pages/about/about.component';
+import { LocationsComponent } from './pages/locations/locations.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: 'full' },
@@ -22,6 +23,11 @@ const routes: Routes = [
     path: "about",
     component: AboutComponent,
     title: 'Designo - About Us'
+  },
+  { 
+    path: "locations",
+    component: LocationsComponent,
+    title: 'Designo - Locations'
   },
 ];
 

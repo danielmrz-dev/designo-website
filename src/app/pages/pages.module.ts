@@ -6,6 +6,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { FilterViewProjectsCardsPipe } from './pipes/filter-view-projects-cards.pipe';
 import { FilterProjectCardsPipe } from './pipes/filter-project-cards.pipe';
 import { AboutComponent } from './about/about.component';
+import { LocationsComponent } from './locations/locations.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { AboutComponent } from './about/about.component';
     FilterViewProjectsCardsPipe,
     FilterProjectCardsPipe,
     AboutComponent,
+    LocationsComponent,
   ],
   imports: [
     CommonModule,
@@ -23,6 +25,7 @@ import { AboutComponent } from './about/about.component';
     HomeComponent,
     ProjectsComponent,
     AboutComponent,
+    LocationsComponent,
   ]
 })
 export class PagesModule { }

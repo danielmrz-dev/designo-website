@@ -1,0 +1,50 @@
+<section class="locations">
+    <ng-template #location let-country="country" let-map="map" let-location="location" let-street="street" let-city="city" let-phone="phone" let-email="email">
+        <iframe class="locations__map" [src]="map" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="locations__info">
+            <h3 class="locations__info-country">{{ country }}</h3>
+            <div class="locations__info-address">
+                <strong>{{ location }}</strong>
+                <p>{{ street }}</p>
+                <p>{{ city }}</p>
+            </div>
+            <div class="locations__info-address">
+                <strong>Contact</strong>
+                <p>{{ phone }}</p>
+                <p>{{ email }}</p>
+            </div>
+        </div>
+    </ng-template>
+
+    <ng-container *ngTemplateOutlet="location; context: {
+        country: 'Canada',
+        map: canada,
+        location: 'Designo Central Office',
+        street: '3886 Wellington Street',
+        city: 'Toronto, Ontario M9C 3J5',
+        phone: 'P : +1 253-863-8967',
+        email: 'M : contact@designo.co',
+    }"/>
+
+    <ng-container *ngTemplateOutlet="location; context: {
+        country: 'Australia',
+        map: australia,
+        location: 'Designo AU Office',
+        street: '19 Balonne Street',
+        city: 'New South Wales 2443',
+        phone: 'P : (02) 6720 9092',
+        email: 'M : contact@designo.au',
+    }"/>
+
+    <ng-container *ngTemplateOutlet="location; context: {
+        country: 'United Kingdom',
+        map: uk,
+        location: 'Designo UK Office',
+        street: '13  Colorado Way',
+        city: 'Rhyd-y-fro SA8 9GA',
+        phone: 'P : 078 3115 1400',
+        email: 'M : contact@designo.uk',
+    }"/>
+
+</section>
+
