@@ -9,7 +9,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { PagesModule } from './pages/pages.module';
 import { A11yModule } from '@angular/cdk/a11y';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,10 +19,10 @@ import { A11yModule } from '@angular/cdk/a11y';
     MatSidenavModule,    
     ComponentsModule,
     PagesModule,
-    A11yModule
+    A11yModule,
 ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
   ],
   bootstrap: [AppComponent]
 })

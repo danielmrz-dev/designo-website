@@ -8,7 +8,8 @@ import { FeatureCardComponent } from './feature-card/feature-card.component';
 import { RouterLink } from '@angular/router';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { LocationCardComponent } from './location-card/location-card.component';
-
+import { ConfirmationModalComponent } from './confirmation-modal/confirmation-modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -16,14 +17,16 @@ import { LocationCardComponent } from './location-card/location-card.component';
     ViewProjectsCardComponent,
     FeatureCardComponent,
     ProjectCardComponent,
-    LocationCardComponent
+    LocationCardComponent,
+    ConfirmationModalComponent
   ],
   imports: [
     CommonModule,
     MatSidenavModule,
     MatDrawer,
     NgTemplateOutlet,
-    RouterLink
+    RouterLink,
+    MatDialogModule
   ],
   exports: [
     HeaderComponent,

@@ -15,4 +15,12 @@
         background-color: v.$Light-Peach;
         color: v.$White;
     }
+    &:disabled {
+        cursor: not-allowed;
+        opacity: .4;
+        &:hover {
+            background-color: v.$White;
+            color: v.$Opaque-Dark-Grey;
+        }
+    }
 }

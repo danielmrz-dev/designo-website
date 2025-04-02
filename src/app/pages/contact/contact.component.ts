@@ -3,6 +3,9 @@ import { ContactFormController } from './contact-form-controller';
 import { FormBuilder } from '@angular/forms';
 import { locationCardInfo } from '../../../data/cards-data';
 import { ILocationCard } from '../../interfaces/location-card.interface';
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmationModalComponent } from '../../components/confirmation-modal/confirmation-modal.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -11,14 +14,21 @@ import { ILocationCard } from '../../interfaces/location-card.interface';
 })
 export class ContactComponent extends ContactFormController {
 
-  fieldOrder: string[] = ['name', 'email', 'phone'];
   locationCardsInfo: ILocationCard[] = locationCardInfo;
   
-  constructor(private readonly fb: FormBuilder) {
+  constructor(
+    private readonly fb: FormBuilder,
+    private readonly dialog: MatDialog,
+    private readonly router: Router
+  ) {
     super(fb);
   }
   
-  log() {
-    console.log(this.contactForm.value);
+  submitContactForm() {
+    this.dialog.open(ConfirmationModalComponent).afterClosed().subscribe(
+      () => {
+        this.router.navigate(['/home']);
+      }
+    );
   }
 }

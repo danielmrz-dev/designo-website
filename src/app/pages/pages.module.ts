@@ -10,6 +10,9 @@ import { LocationsComponent } from './locations/locations.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+import { EmailValidatorDirective } from './contact/email-validator.directive';
+
 
 @NgModule({
   declarations: [
@@ -20,12 +23,15 @@ import { RouterLink } from '@angular/router';
     AboutComponent,
     LocationsComponent,
     ContactComponent,
+    EmailValidatorDirective
   ],
   imports: [
     CommonModule,
     ComponentsModule,
     ReactiveFormsModule,
-    RouterLink
+    RouterLink,
+    NgxMaskDirective, 
+    NgxMaskPipe
   ],
   exports: [
     HomeComponent,
@@ -33,6 +39,9 @@ import { RouterLink } from '@angular/router';
     AboutComponent,
     LocationsComponent,
     ContactComponent,
+  ],
+  providers: [
+    provideNgxMask()
   ]
 })
 export class PagesModule { }

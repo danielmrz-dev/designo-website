@@ -7,14 +7,55 @@
             Ready to take it to the next level? Let’s talk about your project or idea and find out how we can help your business grow. If you are looking for unique digital experiences that’s relatable to your users, drop us a line.
         </p>
     </div>
-    <form [formGroup]="contactForm" class="contact__form" (ngSubmit)="log()">
-        <div 
-            class="contact__form-input-wrapper" 
-            *ngFor="let field of fieldOrder">
+    <form [formGroup]="contactForm" class="contact__form" (ngSubmit)="submitContactForm()">
+        <div class="contact__form-input-wrapper">
             <input type="text" class="contact__form-input"
-                [formControlName]="field" 
-                [placeholder]="field | titlecase">
+                formControlName="name" 
+                placeholder="Name" mask="S*" [validation]="false" [patterns]="includeSpaces">
+                <span 
+                    class="contact__form-input-error" 
+                    *ngIf="name.touched && name.hasError('required')">
+                        Can't be empty
+                    <img src="contact/desktop/icon-error.svg" alt="">
+                </span>
         </div>
+
+        <div class="contact__form-input-wrapper">
+            <input type="email" class="contact__form-input"
+                formControlName="email" 
+                placeholder="Email" appEmailValidator>
+                <span 
+                    class="contact__form-input-error" 
+                    *ngIf="email.touched && email.hasError('required')">
+                        Can't be empty
+                    <img src="contact/desktop/icon-error.svg" alt="">
+                </span>
+                <span 
+                    class="contact__form-input-error" 
+                    *ngIf="email.touched && !email.hasError('required') && email.hasError('invalidEmailPattern')">
+                        Invalid email address
+                    <img src="contact/desktop/icon-error.svg" alt="">
+                </span>
+        </div>
+
+        <div class="contact__form-input-wrapper">
+            <input type="text" class="contact__form-input"
+                formControlName="phone" 
+                placeholder="Phone" mask="(00) 00000-0000">
+                <span 
+                    class="contact__form-input-error" 
+                    *ngIf="phone.touched && phone.hasError('required')">
+                        Can't be empty
+                    <img src="contact/desktop/icon-error.svg" alt="">
+                </span>
+                <span 
+                    class="contact__form-input-error" 
+                    *ngIf="phone.touched && !phone.hasError('required') && phone.hasError('minlength')">
+                        Must have 11 digits
+                    <img src="contact/desktop/icon-error.svg" alt="">
+                </span>
+        </div>
+        
         <div class="contact__form-input-wrapper">
             <textarea 
                 formControlName="message"
@@ -22,8 +63,14 @@
                 rows="4"
                 class="contact__form-input">
             </textarea>
+            <span 
+                class="contact__form-input-error" 
+                *ngIf="message.touched && message.hasError('required')">
+                    Can't be empty
+                <img src="contact/desktop/icon-error.svg" alt="">
+            </span>
         </div>
-        <button type="submit" class="contact__form-submit-btn">Submit</button>
+        <button type="submit" class="contact__form-submit-btn" [disabled]="contactForm.invalid">Submit</button>
     </form>
 </section>
 

@@ -42,6 +42,21 @@
                 color: v.$White;
                 opacity: .5;
             }
+            &-wrapper {
+                position: relative;
+                z-index: 1;
+            }
+            &-error {
+                display: flex;
+                align-items: center;
+                gap: .5625rem;
+                font-family: v.$Jost-Italic;
+                color: v.$White;
+                position: absolute;
+                top: 10px;
+                right: 8px;
+                z-index: 0;
+            }
         }
         &-submit-btn {
             @include m.whiteButton();
