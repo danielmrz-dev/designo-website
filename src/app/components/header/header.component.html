@@ -1,6 +1,11 @@
 <header class="header">
     <img src="shared/desktop/logo-dark.png" alt="" class="header__logo" (click)="navigateToHome()">
-    <button class="header__menu-btn" (click)="drawer.toggle()">
+    <button 
+        (click)="drawer.toggle()" 
+        (keydown.enter)="toggleMenu($event)" 
+        (keydown.escape)="toggleMenu($event)" 
+        class="header__menu-btn" 
+        [ngClass]="{ 'close-icon': drawer.opened}">
         <img src="shared/mobile/icon-hamburger.svg" alt="" class="header__menu-btn-img">
     </button>
 </header>
