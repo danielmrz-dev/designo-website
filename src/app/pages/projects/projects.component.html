@@ -15,7 +15,7 @@
 <section class="project__view-project-cards">
     <app-view-projects-card
         *ngFor="let card of viewProjectCardsContent | filterViewProjectsCards : pageTitle"
-        [bgImage]="card.image"
+        [bgImage]="getBackgroundImages(card)"
         [title]="card.title"
         [link]="card.link"
         >

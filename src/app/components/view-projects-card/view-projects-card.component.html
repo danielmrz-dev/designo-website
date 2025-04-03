@@ -1,7 +1,10 @@
-<div [routerLink]="['/projects', link]" class="view-project-card" [ngStyle]="{
-    'background': 'url(' + bgImage + ')  no-repeat',
-    'background-size': 'cover'
-    }">
+<div 
+    [routerLink]="['/projects', link]" 
+    class="view-project-card"
+    [ngStyle]="{
+        'background': 'url(' + bgImage + ')  no-repeat',
+    }"
+    >
     <h2 class="view-project-card__title">{{ title }}</h2>
     <p class="view-project-card__subtitle">View Projects</p>
 </div>

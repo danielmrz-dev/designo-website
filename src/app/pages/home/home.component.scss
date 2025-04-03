@@ -50,3 +50,35 @@
         gap: 5rem;
     }
 }
+
+@media screen and (min-width: 768px) {
+    .home {
+        margin: 0 2.4375rem;
+        background-position: right -121px top 102px;
+        border-radius: 15px;
+        padding: 3.75rem 3.625rem;
+        &__title {
+            font-size: 3rem;
+            line-height: 48px;
+        }
+        &__paragraph {
+            font-size: 1rem;
+            line-height: 26px;
+            padding-inline: 4.3125rem;
+        }
+        &__btn {
+            @include m.whiteButton();
+            z-index: 1;
+        }
+        &__image {
+            top: 290px;
+        }
+        &__project-cards {
+            padding: 7.5rem 2.4375rem;
+        }
+        &__feature-cards {
+            padding: 0 2.4375rem 9.5rem;
+            gap: 2rem;
+        }
+    }
+}

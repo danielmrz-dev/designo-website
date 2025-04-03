@@ -1,7 +1,7 @@
 @use "../../../scss/variables" as v;
 
 .view-project-card {
-    background-size: cover;
+    background-size: cover !important;
     color: v.$White;
     text-transform: uppercase;
     border-radius: 15px;
@@ -47,6 +47,18 @@
         gap: 1rem;
         &::after {
             content: url(../../../assets/images/home/desktop/arrow.svg);
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .view-project-card {
+        padding: 3.3125rem 0;
+        gap: 1.5rem;
+        &__title {
+            font-size: 2.5rem;
+            line-height: 48px;
+            letter-spacing: 2px;
         }
     }
 }

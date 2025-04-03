@@ -24,10 +24,35 @@
         height: 1.5rem;
         opacity: 0;
     }
+    &__navbar {
+        display: none;
+    }
 }
 
 .close-icon {
     transform: rotate(180deg);
     background: transparent url(../../../assets/images/shared/mobile/icon-close.svg) top center no-repeat;
     background-size: contain;
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        padding: 4rem 2.4375rem;
+        &__menu-btn {
+            display: none;
+        }
+        &__navbar {
+            display: flex;
+            align-items: center;
+            gap: 2.625rem;
+            &-item {
+                font-size: 14px;
+                text-transform: uppercase;
+                text-decoration: none;
+                line-height: 14px;
+                letter-spacing: 2px;
+                color: v.$Dark-Grey;
+            }
+        }
+    }
 }

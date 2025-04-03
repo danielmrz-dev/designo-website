@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { capitalize } from '../../utils/format-page-title';
@@ -33,6 +33,19 @@ export class ProjectsComponent {
         this.titleService.setTitle(`Designo - ${capitalize(category)}`)
       }
     })
+  }
+
+  @HostListener('window:resize', ['$event'])
+  getBackgroundImages(card: IViewProjectCard) {
+    if (window.innerWidth < 768) {
+      return card.imageMobile;
+    }
+    
+    if (window.innerWidth >= 768) {
+      return card.imageTablet;
+    }
+  
+    return card.imageDesktop;
   }
 
 }

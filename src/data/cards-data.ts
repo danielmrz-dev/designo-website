@@ -6,17 +6,23 @@ import { IViewProjectCard } from "../app/interfaces/view-project-card.interface"
 export const viewProjectCardsContent: IViewProjectCard[] = [
     {
         title: 'Web Design',
-        image: 'home/mobile/image-web-design.jpg',
+        imageMobile: 'home/mobile/image-web-design.jpg',
+        imageTablet: 'home/tablet/image-web-design.jpg',
+        imageDesktop: 'home/desktop/image-web-design-small.jpg',
         link: 'web-design'
     },
     {
         title: 'App Design',
-        image: 'home/mobile/image-app-design.jpg',
+        imageMobile: 'home/mobile/image-app-design.jpg',
+        imageTablet: 'home/tablet/image-app-design.jpg',
+        imageDesktop: 'home/desktop/image-app-design.jpg',
         link: 'app-design'
     },
     {
         title: 'Graphic Design',
-        image: 'home/mobile/image-graphic-design.jpg',
+        imageMobile: 'home/mobile/image-graphic-design.jpg',
+        imageTablet: 'home/tablet/image-graphic-design.jpg',
+        imageDesktop: 'home/desktop/image-graphic-design.jpg',
         link: 'graphic-design'
     },
 ]

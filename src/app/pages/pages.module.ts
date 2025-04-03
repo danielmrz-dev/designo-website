@@ -12,6 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 import { EmailValidatorDirective } from './contact/email-validator.directive';
+import { GetBackgroundImagePipe } from './pipes/get-background-image.pipe';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { EmailValidatorDirective } from './contact/email-validator.directive';
     AboutComponent,
     LocationsComponent,
     ContactComponent,
-    EmailValidatorDirective
+    EmailValidatorDirective,
+    GetBackgroundImagePipe
   ],
   imports: [
     CommonModule,
