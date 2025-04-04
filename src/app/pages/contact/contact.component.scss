@@ -72,3 +72,37 @@
         gap: 3rem;
     }
 }
+
+@media screen and (min-width: 768px) {
+    .contact {
+        padding: 4.4375rem 3.625rem;
+        background: v.$Peach url(../../../assets/images/contact/desktop/bg-pattern-hero-desktop.svg) no-repeat;
+        background-position: -112px -52px;
+        margin: 0 2.4375rem;
+        border-radius: 15px;
+        &__text {
+            text-align: start;
+            gap: 2rem;
+            &-title {
+                font-size: 3rem;
+                line-height: 3rem;
+            }
+            &-paragraph {
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+        &__form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            &-input {
+                font-size: .9375rem;
+            }
+            &-submit-btn {
+                margin: 0 0 0 auto;
+            }
+        }
+    }
+    
+}

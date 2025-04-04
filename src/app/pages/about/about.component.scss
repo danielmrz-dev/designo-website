@@ -3,7 +3,7 @@
 .about {
     display: flex;
     flex-direction: column;
-    padding-bottom: 288px;
+    padding-bottom: 144px;
     &__content-section {
         background: v.$Peach url(../../../assets/images/shared/mobile/bg-pattern-design-pages-intro-mobile.svg) no-repeat;
         background-position: top -113px right 0px;
@@ -14,7 +14,7 @@
         &:not(:nth-child(1)) {
             background: v.$Very-Light-Peach url(../../../assets/images/shared/desktop/bg-pattern-three-circles.svg);
         }
-        &__image {
+        &-img {
             width: 100%;
         }
         &-text {
@@ -65,7 +65,7 @@
     .about {
         margin: 0 39px;
         gap: 7.5rem;
-        padding-bottom: 350px;
+        padding-bottom: 144px;
         &__content-section {
             background: v.$Peach url(../../../assets/images/about/desktop/bg-pattern-hero-about-desktop.svg) top left no-repeat;
             background-position: 0 150px;

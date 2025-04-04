@@ -44,6 +44,7 @@
         padding: 4rem 1.5rem;
         &-logo {
             max-width: 202px;
+            cursor: pointer;
         }
         &-divider {
             border-color: v.$Divider-Color;

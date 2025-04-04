@@ -24,6 +24,7 @@ export class FooterComponent {
           this.showFooterCard = true;         
         }
       })
+      this.onResize();
   }
 
   @HostListener('window:resize', ['$event'])
