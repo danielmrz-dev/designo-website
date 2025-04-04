@@ -32,3 +32,28 @@
         gap: 1.5rem;
     }
 }
+
+@media screen and (min-width: 768px) {
+    .project {
+        background: v.$Peach url(../../../assets/images/shared/tablet/bg-pattern-design-pages-intro-tablet.svg) no-repeat;
+        background-position: 50px -120px;
+        margin: 0 2.4375rem;
+        border-radius: 15px;
+        &__title {
+            font-size: 3rem;
+            line-height: 3rem;
+        }
+        &__paragraph {
+            font-size: 1rem;
+            line-height: 26px;
+            padding: 0 8rem;
+        }
+        &__projects-list {
+            padding: 6rem 2.4375rem 0;
+            gap: 2rem;
+        }
+        &__view-project-cards {
+            padding: 7.5rem 2.4375rem;
+        }
+    }
+}

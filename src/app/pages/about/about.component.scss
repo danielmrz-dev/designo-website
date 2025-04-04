@@ -3,50 +3,38 @@
 .about {
     display: flex;
     flex-direction: column;
-    padding-bottom: 120px;
-    &__image {
-        width: 100%;
-    }
-    &__first-text-section {
-        background: v.$Peach url(../../../assets/images/about/mobile/bg-pattern-hero-about-mobile.svg) top center no-repeat;
-        background-position: right top -142px;
-        padding: 5rem 1.5rem;
+    padding-bottom: 288px;
+    &__content-section {
+        background: v.$Peach url(../../../assets/images/shared/mobile/bg-pattern-design-pages-intro-mobile.svg) no-repeat;
+        background-position: top -113px right 0px;
         text-align: center;
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
         color: v.$White;
-        &-title {
-            font-size: 2rem;
-            line-height: 36px;
-            font-weight: 500;
+        &:not(:nth-child(1)) {
+            background: v.$Very-Light-Peach url(../../../assets/images/shared/desktop/bg-pattern-three-circles.svg);
         }
-        &-paragraph {
-            font-size: .9375rem;
-            line-height: 25px;
+        &__image {
+            width: 100%;
         }
-    }
-    &__second-text-section {
-        background: v.$Very-Light-Peach url(../../../assets/images/shared/desktop/bg-pattern-three-circles.svg);
-        padding: 5rem 1.5rem;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        color: v.$White;
-        div {
+        &-text {
+            padding: 5rem 1.5rem;
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+            }
         }
         &-title {
-            color: v.$Peach;
             font-size: 2rem;
             line-height: 36px;
             font-weight: 500;
         }
         &-paragraph {
-            color: v.$Dark-Grey;
             font-size: .9375rem;
             line-height: 25px;
             font-weight: 500;
@@ -58,5 +46,54 @@
         display: flex;
         flex-direction: column;
         gap: 3rem;
+    }
+}
+
+.black {
+    color: v.$Black;
+}
+
+.white {
+    color: v.$White;
+}
+
+.peach {
+    color: v.$Peach;
+}
+
+@media screen and (min-width: 768px) {
+    .about {
+        margin: 0 39px;
+        gap: 7.5rem;
+        padding-bottom: 350px;
+        &__content-section {
+            background: v.$Peach url(../../../assets/images/about/desktop/bg-pattern-hero-about-desktop.svg) top left no-repeat;
+            background-position: 0 150px;
+            border-radius: 15px;
+            overflow: hidden;
+            &:not(:nth-child(1)) {
+                background: v.$Very-Light-Peach url(../../../assets/images/shared/desktop/bg-pattern-three-circles.svg);
+            }
+            &-text {
+                padding: 4rem 1.5rem;
+                gap: 2rem;
+                max-width: 640px;
+                align-self: center;
+            }
+            &-title {
+                font-size: 3rem;
+                line-height: 3rem;
+            }
+            &-paragraph {
+                font-size: 1rem;
+                line-height: 26px;
+            }
+        }
+        &__location-cards {
+            padding: 0 0;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
     }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter, last } from 'rxjs';
 
@@ -9,7 +9,8 @@ import { filter, last } from 'rxjs';
 })
 export class FooterComponent {
 
-  showFooterCard: boolean = true
+  showFooterCard: boolean = true;
+  cardMargin: string = ''
 
   constructor(private readonly route: Router) {}
 
@@ -23,5 +24,16 @@ export class FooterComponent {
           this.showFooterCard = true;         
         }
       })
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    const width = window.innerWidth;
+    if (width < 768) {
+      this.cardMargin = '192px'
+    }
+    if (width >= 768 && width < 1024) {
+      this.cardMargin = '250px'
+    }
   }
 }

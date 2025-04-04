@@ -52,6 +52,23 @@
                 line-height: 14px;
                 letter-spacing: 2px;
                 color: v.$Dark-Grey;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -3px;
+                    background-color: v.$Black;
+                    height: 1px;
+                    width: 100%;
+                    transform: scaleX(0);
+                    transition: transform .3s ease;
+                }
+                &:hover {
+                    &::after {
+                        transform: scaleX(1);
+                    }
+                }
             }
         }
     }

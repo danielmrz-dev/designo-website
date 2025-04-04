@@ -1,29 +1,53 @@
 <section class="about">
-    <img src="about/mobile/image-about-hero.jpg" alt="" class="about__image">
-    <div class="about__first-text-section">
-        <h2 class="about__first-text-section-title">About Us</h2>
-        <p class="about__first-text-section-paragraph">
-            Founded in 2010, we are a creative agency that produces lasting results for our clients. We’ve partnered with many startups, corporations, and nonprofits alike to craft designs that make real impact. We’re always looking forward to creating brands, products, and digital experiences that connect with our clients’ audiences.
-        </p>
-    </div>
-    <img src="about/mobile/image-world-class-talent.jpg" alt="" class="about__image">
     
     <ng-template #textSection 
+        let-img="img"
+        let-imgTablet="imgTablet"
+        let-imgDesktop="imgDesktop"
         let-title="title" 
-        let-firstParagraph="first" 
+        let-firstParagraph="first"
+        let-titleColor="titleColor"
+        let-textColor="textColor"
         let-secondParagraph="second">
-        <div class="about__second-text-section">
-            <h2 class="about__second-text-section-title"> {{ title }} </h2>
-            <div>
-                <p class="about__second-text-section-paragraph"> {{ firstParagraph }} </p>
-                <p class="about__second-text-section-paragraph"> {{ secondParagraph }} </p>
+        <div class="about__content-section">
+            <picture>
+                <source media="(min-width: 1024px)" [srcset]="imgDesktop" type="image/jpeg">
+                <source media="(min-width: 768px)" [srcset]="imgTablet" type="image/jpeg">
+                <img [src]="img" alt="" class="about__content-section-img">
+            </picture>
+            <div class="about__content-section-text">
+                <h2 [class]="['about__content-section-title', titleColor]"> {{ title }} </h2>
+                <div>
+                    <p [class]="['about__content-section-paragraph', textColor]">
+                        {{ firstParagraph }} 
+                    </p>
+                    <p *ngIf="secondParagraph" [class]="['about__content-section-paragraph', textColor]">
+                        {{ secondParagraph }}
+                    </p>
+                </div>
             </div>
         </div>
     </ng-template>
 
     <ng-container *ngTemplateOutlet="textSection; context: {
+        img: 'about/mobile/image-about-hero.jpg',
+        imgTablet: 'about/tablet/image-about-hero.jpg',
+        imgDesktop: 'about/desktop/image-about-hero.jpg',
+        title: 'About Us',
+        titleColor: 'white',
+        textColor: 'white',
+        first: 'Founded in 2010, we are a creative agency that produces lasting results for our clients. We’ve partnered with many startups, corporations, and nonprofits alike to craft designs that make real impact. We’re always looking forward to creating brands, products, and digital experiences that connect with our clients’ audiences.',
+    }">
+    </ng-container>
+
+    <ng-container *ngTemplateOutlet="textSection; context: {
+        img: 'about/mobile/image-world-class-talent.jpg',
+        imgTablet: 'about/tablet/image-world-class-talent.jpg',
+        imgDesktop: 'about/desktop/image-world-class-talent.jpg',
         title: 'World-class talent',
-        first: 'We are a crew of strategists, problem-solvers, and technologists. Every design is thoughtfully crafted from concept to launch, ensuring success in its given market. We are constantly updating our skills in a myriad of platforms.   ',
+        titleColor: 'peach',
+        textColor: 'black',
+        first: 'We are a crew of strategists, problem-solvers, and technologists. Every design is thoughtfully crafted from concept to launch, ensuring success in its given market. We are constantly updating our skills in a myriad of platforms.',
         second: 'Our team is multi-disciplinary and we are not merely interested in form — content and meaning are just as important. We give great importance to craftsmanship, service, and prompt delivery. Clients have always been impressed with our high-quality outcomes that encapsulates their brand’s story and mission.'
     }">
     </ng-container>
@@ -36,14 +60,16 @@
         </app-location-card>
     </div>
 
-    <img src="about/mobile/image-real-deal.jpg" alt="">
-
     <ng-container *ngTemplateOutlet="textSection; context: {
+        img: 'about/mobile/image-real-deal.jpg',
+        imgTablet: 'about/tablet/image-real-deal.jpg',
+        imgDesktop: 'about/desktop/image-real-deal.jpg',
         title: 'The real deal',
+        titleColor: 'peach',
+        textColor: 'black',
         first: 'As strategic partners in our clients’ businesses, we are ready to take on any challenge as our own. Solving real problems require empathy and collaboration, and we strive to bring a fresh perspective to every opportunity. We make design and technology more accessible and give you tools to measure success.',
         second: 'We are visual storytellers in appealing and captivating ways. By combining business and marketing strategies, we inspire audiences to take action and drive real results.'
     }">
     </ng-container>
-    
-    
+
 </section>
