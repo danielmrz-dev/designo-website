@@ -1,7 +1,8 @@
 <section class="locations">
     <ng-template #location let-country="country" let-map="map" let-location="location" let-street="street" let-city="city" let-phone="phone" let-email="email">
+
         <iframe class="locations__map" [src]="map" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="locations__info" >
+        <div class="locations__info">
             <h3 class="locations__info-country">{{ country }}</h3>
             <div class="locations__info-address">
                 <strong>{{ location }}</strong>
@@ -14,6 +15,7 @@
                 <p>{{ email }}</p>
             </div>
         </div>
+        
     </ng-template>
 
     <ng-container *ngTemplateOutlet="location; context: {
@@ -25,7 +27,6 @@
         phone: 'P : +1 253-863-8967',
         email: 'M : contact@designo.co',
     }">
-        <div id="canada"></div>
     </ng-container>
 
     <ng-container *ngTemplateOutlet="location; context: {
@@ -37,7 +38,6 @@
         phone: 'P : (02) 6720 9092',
         email: 'M : contact@designo.au',
     }">
-        <div id="australia"></div>
     </ng-container>
 
     <ng-container *ngTemplateOutlet="location; context: {
@@ -49,7 +49,6 @@
         phone: 'P : 078 3115 1400',
         email: 'M : contact@designo.uk',
     }">
-        <div id="uk"></div>
     </ng-container>
 
 </section>
