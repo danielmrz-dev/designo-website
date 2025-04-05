@@ -1,4 +1,4 @@
-<footer class="footer" [ngStyle]="{ 'margin-top': showFooterCard ? cardMargin : '0' }">
+<footer class="footer" [ngStyle]="{ 'margin-top': showFooterCard ? cardMargin || '192px' : '0' }">
     <div class="footer__get-in-touch" *ngIf="showFooterCard">
         <div class="footer__get-in-touch-text-container">
             <h2 class="footer__get-in-touch-title">

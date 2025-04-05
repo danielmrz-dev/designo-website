@@ -1,6 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { filter, last } from 'rxjs';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-footer',
@@ -10,10 +10,11 @@ import { filter, last } from 'rxjs';
 export class FooterComponent {
 
   showFooterCard: boolean = true;
-  cardMargin: string = ''
+  cardMargin: string = '';
 
-  constructor(private readonly route: Router) {}
-
+  constructor(private readonly route: Router) {
+  }
+  
   ngOnInit(): void {
     this.route.events.pipe(
       filter(event => event instanceof NavigationEnd))
@@ -31,10 +32,11 @@ export class FooterComponent {
   onResize() {
     const width = window.innerWidth;
     if (width < 768) {
-      this.cardMargin = '192px'
-    }
+      this.cardMargin = '192px';
+    } 
+
     if (width >= 768 && width < 1024) {
-      this.cardMargin = '250px'
-    }
+      this.cardMargin = '250px';
+    } 
   }
 }

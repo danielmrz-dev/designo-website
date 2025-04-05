@@ -158,3 +158,38 @@
         }
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .footer {
+        &__get-in-touch {
+            background-position: center top -100px;
+            margin: 39px auto -198px;
+            transform: translateY(-220px);
+            padding: 4.5rem 5.9375rem;
+            max-width: 1111px;
+            &-text-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                align-items: center;
+                text-align: left;
+            }
+            &-title {
+                grid-area: 1 / 1;
+            }
+            &-paragraph {
+                grid-area: 2 / 1;
+                padding: 0;
+            }
+            &-btn {
+                grid-area: 1 / 2 / 3 / 3;
+                width: fit-content;
+                justify-self: end;
+            }
+        }
+        &__info {
+            max-width: 1111px;
+            margin: auto;
+            padding: 4rem 0;
+        }
+    }
+}

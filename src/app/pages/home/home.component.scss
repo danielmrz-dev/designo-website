@@ -82,3 +82,46 @@
         }
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .home {
+        max-width: 1111px;
+        background-position: right 0px top 0;
+        padding: 3.75rem 5.9375rem;
+        align-items: flex-start;
+        justify-content: center;
+        min-height: 640px;
+        margin: auto;
+        &__text {
+            max-width: 540px;
+            text-align: left;
+        }
+        
+        &__paragraph {
+            padding-inline: 0;
+            max-width: 430px;
+        }
+        &__btn {
+            margin-top: 1rem;
+        }
+        &__image {
+            top: -30px;
+            right: -80px;
+        }
+        &__project-cards {
+            max-width: 1111px;
+            padding: 10rem 0;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.875rem;
+        }
+        &__feature-cards {
+            flex-direction: row;
+            padding: 0 0 9.5rem;
+            gap: 2rem;
+            max-width: 1111px;
+            margin: auto;
+        }
+    }
+}
