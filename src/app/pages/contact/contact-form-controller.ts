@@ -10,10 +10,10 @@ export class ContactFormController {
 
     constructor(private readonly _fb: FormBuilder) {
         this.contactForm = this._fb.group({
-            name: this._fb.control('dsaa', [Validators.required]),
-            email: this._fb.control('dan@dan.com', [Validators.required]),
-            phone: this._fb.control('99999999999', [Validators.required, Validators.minLength(11)]),
-            message: this._fb.control('hahaha', [Validators.required]),
+            name: this._fb.control('', [Validators.required]),
+            email: this._fb.control('', [Validators.required]),
+            phone: this._fb.control('', [Validators.required, Validators.minLength(11)]),
+            message: this._fb.control('', [Validators.required]),
         })
     }
 

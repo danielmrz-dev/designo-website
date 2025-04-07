@@ -10,3 +10,10 @@ body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+@media screen and (min-width: 1200px) {
+    body {
+        background: url(./assets/images/shared/desktop/bg-pattern-leaf.svg) no-repeat, url(./assets/images/shared/desktop/bg-pattern-leaf-right.svg) no-repeat;
+        background-position: 0 475px, right top 1850px;
+    }
+}

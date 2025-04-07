@@ -36,6 +36,7 @@
             border: none;
             border-bottom: 1px solid v.$White;
             padding: 11px 13px;
+            color: v.$White;
             &::placeholder {
                 font-size: .9375rem;
                 line-height: 26px;
@@ -104,5 +105,33 @@
             }
         }
     }
-    
+}
+
+@media screen and (min-width: 1200px) {
+    .contact {
+        flex-direction: row;
+        align-items: center;
+        padding: 4.4375rem 5.9375rem;
+        background-position: 0 -130px;
+        max-width: 1111px;
+        margin: 0 auto;
+        border-radius: 15px;
+        &__text {
+            flex: 1 1;
+            &-paragraph {
+                padding-right: 3rem;
+            }
+        }
+        &__form {
+            flex: 0 1 380px;
+            gap: 1rem;
+        }
+        &__locations {
+            flex-direction: row;
+            justify-content: space-around;
+            max-width: 1111px;
+            margin: auto;
+            padding: 10rem 0;
+        }
+    }
 }
