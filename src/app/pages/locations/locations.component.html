@@ -1,18 +1,20 @@
 <section class="locations">
     <ng-template #location let-country="country" let-map="map" let-location="location" let-street="street" let-city="city" let-phone="phone" let-email="email">
 
-        <iframe class="locations__map" [src]="map" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="locations__info">
-            <h3 class="locations__info-country">{{ country }}</h3>
-            <div class="locations__info-address">
-                <strong>{{ location }}</strong>
-                <p>{{ street }}</p>
-                <p>{{ city }}</p>
-            </div>
-            <div class="locations__info-address">
-                <strong>Contact</strong>
-                <p>{{ phone }}</p>
-                <p>{{ email }}</p>
+        <div class="locations__location">
+            <iframe class="locations__map" [src]="map" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="locations__info">
+                <h3 class="locations__info-country">{{ country }}</h3>
+                <div class="locations__info-address">
+                    <strong>{{ location }}</strong>
+                    <p>{{ street }}</p>
+                    <p>{{ city }}</p>
+                </div>
+                <div class="locations__info-address">
+                    <strong>Contact</strong>
+                    <p>{{ phone }}</p>
+                    <p>{{ email }}</p>
+                </div>
             </div>
         </div>
         

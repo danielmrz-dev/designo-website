@@ -57,3 +57,29 @@
         }
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .project {
+        max-width: 1111px;
+        margin: 0 auto;
+        background-position: right -120px;
+        &__paragraph {
+            max-width: 660px;
+        }
+        &__projects-list {
+            max-width: 1111px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 6rem 0 0;
+        }
+        &__view-project-cards {
+            max-width: 1111px;
+            margin: auto;
+            padding: 7.5rem 0;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
