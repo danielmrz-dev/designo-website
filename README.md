@@ -1,27 +1,56 @@
-# DesignoWebsite
+# Frontend Mentor - Designo agency website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.1.
+![Design preview for the Designo agency website coding challenge](./preview.jpg)
 
-## Development server
+# Frontend Mentor - Designo agency website solution
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This is a solution to the [Designo agency website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/designo-multipage-website-G48K6rfUT). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Code scaffolding
+## Table of contents
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Author](#author)
 
-## Build
+## Overview
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### The challenge
 
-## Running unit tests
+Users should be able to:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- View the optimal layout for each page depending on their device's screen size
+- See hover states for all interactive elements throughout the site
+- Receive an error message when the contact form is submitted if:
+  - The `Name`, `Email Address` or `Your Message` fields are empty should show "Can't be empty"
+  - The `Email Address` is not formatted correctly should show "Please use a valid email address"
+- **Bonus**: View actual locations on the locations page maps
 
-## Running end-to-end tests
+### Screenshot
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![](./src/assets/images/screenshot.png)
 
-## Further help
+### Links
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Solution URL: [Link](https://www.frontendmentor.io/solutions/designo-multi-page-website-built-with-angular-sass-vpI_BbIj6Z)
+- Live Site URL: [Link](https://designo-website-jet.vercel.app/home)
+
+## My process
+
+### Built with
+
+- Angular
+- Angular Material
+- Typescript
+- SASS
+- NgxMask
+- Mobile-first workflow
+
+## Author
+
+- Website - [@danielmrz-dev](https://danielmrz-portfolio.vercel.app/)
+- Frontend Mentor - [@danielmrz-dev](https://www.frontendmentor.io/profile/danielmrz-dev)
+- Twitter - [@danielmrz_dev](https://www.twitter.com/@danielmrz_dev)
